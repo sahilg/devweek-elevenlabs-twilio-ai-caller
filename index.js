@@ -28,7 +28,7 @@ const start = async () => {
   try {
     // Register route handlers
     await registerInboundRoutes(fastify);
-    await registerOutboundRoutes(fastify);
+    // await registerOutboundRoutes(fastify);
 
     // Start listening
     await fastify.listen({ port: PORT, host: '0.0.0.0' });
