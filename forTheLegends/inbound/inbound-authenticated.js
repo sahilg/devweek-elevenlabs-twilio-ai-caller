@@ -72,6 +72,8 @@ export function registerInboundRoutes(fastify) {
         elevenLabsWs.on("message", (data) => {
           try {
             const message = JSON.parse(data);
+            console.log(message.type);
+            console.log(data);
             handleElevenLabsMessage(message, connection);
           } catch (error) {
             console.error("[II] Error parsing message:", error);
