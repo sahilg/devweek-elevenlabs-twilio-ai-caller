@@ -95,6 +95,7 @@ export function registerInboundRoutes(fastify) {
               console.info("[II] Received conversation initiation metadata.");
               break;
             case "audio":
+              console.log("[II] Received audio from ElevenLabs. Length:", message.audio_event?.audio_base_64.length);
               if (message.audio_event?.audio_base_64) {
                 const audioData = {
                   event: "media",
